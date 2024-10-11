@@ -13,10 +13,14 @@
         <div class="signup-box">
             <h2>Create Your Account</h2>
             <p>Join us and start your journey!</p>
-            <form action="/app" method="POST">
+            <form action="/app" method="POST" enctype="multipart/form-data">
                 <div class="input-field">
                     <input type="text" id="fullname" name="fullname" required>
                     <label for="fullname">Full Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="file" name="image" id="image">
+                    <label for="image">Choose Profile Pic</label>
                 </div>
                 <div class="input-field">
                     <input type="text" id="unique-id" name="uniqueid" required>
