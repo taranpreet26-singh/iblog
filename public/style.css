@@ -1,0 +1,286 @@
+:root {
+    --font-family: "Baloo Bhaijaan 2", system-ui;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Baloo Bhaijaan 2", system-ui;
+    font-optical-sizing: auto;
+
+}
+
+.navigation:hover .links ul li a {
+    color: white;
+}
+.navigation {
+    height: 14vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 30vw;
+    align-items: center;
+}
+
+.navigation:hover {
+    background-color: black;
+    color: whitesmoke;
+    transition: all 0.4s;
+}
+
+.left-nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+.right-nav input {
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.right-nav form{
+    display: flex;
+}
+
+.box {
+    background-color: red;
+    width: 4vw;
+    transform: skewX(20deg);
+}
+
+.btn {
+    width: 4vw;
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+
+.links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding-top: 12px;
+    height: 30px;
+    align-items: center;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo h1{
+    font-size: 30px;
+}
+.banner-content{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    background-color: black;
+    color: whitesmoke;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.left-content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 4;
+}
+
+.left-content p{
+    text-align: justify;
+    text-wrap: wrap;
+    width: 40vw;
+}
+
+.right-side{
+    width: 40%;
+    height: inherit;
+}
+.right-side div{
+height: inherit;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.right-side div img{
+    width: 24vw;
+    border-radius: 200px;
+    border: 5px inset  whitesmoke;
+    object-fit: cover;
+    height: 50vh;
+    
+}
+.right-content{
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.paint img{
+    position: absolute;
+    top: -20px;
+    left: -200px;
+    width: 36vw;
+    opacity: 0.7;
+}
+
+.paper-one{
+    position: absolute;
+    top: 10px;
+    left: -120px;
+    z-index: 1;
+}
+
+.paper-two{
+    position: absolute;
+    bottom: -139px;
+    z-index: 2;
+    left: -27px;;
+}
+
+.paper-one img{
+    width: 60vw;
+}
+
+.paper-two img{
+    width: 40vw;
+
+}
+
+
+.header{
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    height: 6vh;
+    padding: 4px 10px;
+    color: whitesmoke;
+}
+
+.blog-list{
+    background-color: #f4f2f3;
+    width: 80%;
+    margin: auto;
+    padding: 4px;
+    overflow: scroll;
+    max-height: 100vh;
+}
+
+.author-name{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.blog{
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+.author-img{
+    width: 3vw;
+    height: 6vh;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.blog-left-img{
+    width: 15vw;
+}
+
+.title h2{
+    max-width: 34vw;
+    text-wrap: wrap;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.info{
+    display: flex;
+    margin-left: 8px;
+    gap: 10px;
+}
+
+
+
+.blog-container{
+    background-color: #f4f2f3;
+    width: 80vw;
+    margin: auto;
+    min-height: 60vh;
+}
+
+.blog-container form{
+    padding: 10px;
+}
+
+.blog-container form input{
+    background-color: rgb(207, 203, 203);
+    font-size: large;
+    font-weight: 500;
+}
+.blog-container form textarea{
+    background-color: rgb(207, 203, 203);
+    font-size: medium;
+
+}
+
+.blog-container form label{
+    font-size: larger;
+    font-weight: 700;
+}
+
+.blog-container form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-submit{
+    width: 12vw;
+    height: 6vh;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+.btn-submit:hover{
+    background-color: black;
+    color: whitesmoke;
+}

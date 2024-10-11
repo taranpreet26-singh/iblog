@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login on IBlog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(5deg, black, orange);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            animation: floatIn 1s ease-in-out;
+        }
+        
+        .login-box h2 {
+            color: #e8a239;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .login-box p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .input-field {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .input-field input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            transition: 0.3s;
+        }
+        
+        .input-field input:focus {
+            border-bottom: 2px solid #e8a239;
+        }
+        
+        .input-field label {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.3s;
+            color: #999;
+            pointer-events: none;
+        }
+        
+        .input-field input:focus + label,
+        .input-field input:not(:placeholder-shown) + label {
+            top: 0;
+            left: 0;
+            font-size: 0.8rem;
+            color: #e8a239;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #e8a239;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: rgb(165, 111, 10);
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            color: #e8a239;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Welcome Back!</h2>
+            <p>Login to continue your musical journey</p>
+            <form action="/home" method="POST">
+                <div class="input-field">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="footer-links">
+                <a href="#">Forgot Password?</a>
+                <a href="/index.html">Create an Account</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".btn").addEventListener("dbclick",async ()=>{
+            let username = document.getElementById('username').value
+            let password = document.getElementById('password').value
+            let res = await fetch('/home',{method : 'POST',headers : {'Content-Type' : 'application/json'},body : JSON.stringify({userName : username,password : password})})
+            let a = await res.text()
+            console.log(a)
+        })
+    </script>
+</body>
+</html>

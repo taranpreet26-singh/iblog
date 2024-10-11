@@ -1,0 +1,148 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(125deg, black, orange);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.signup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: floatIn 1s ease-in-out;
+}
+
+/* Header Styles */
+.signup-box h2 {
+    color: #e8a239;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.signup-box p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Input Field Styles */
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+    resize: none;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-bottom: 2px solid #0072ff;
+}
+
+.input-field label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    color: #999;
+    pointer-events: none;
+    background: white;
+    padding: 0 5px;
+}
+
+.input-field textarea {
+    height: auto;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label,
+.input-field textarea:focus + label,
+.input-field textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 0.8rem;
+    color: #e8a239;
+}
+
+/* Button Styles */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #e8a239;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #9f650e;
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #e8a239;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .signup-box {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
